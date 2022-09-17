@@ -1,5 +1,7 @@
+// Import Performance
 const { performance } = require('perf_hooks');
 
+// Default Puzzle Size
 const puzzleSize = 9;
 
 
@@ -54,6 +56,7 @@ module.exports = {solve};
 
 // ***** Private Functions *****
 
+// Function to return an array of solved indices
 function getSolvedIndices(oldPuzzle) {
     let solvedList = [];
 
@@ -67,6 +70,7 @@ function getSolvedIndices(oldPuzzle) {
     return solvedList;
 }
 
+// Function to check if puzzle is empty
 function isEmpty(puzzle) {
     for(let i = 0; i < puzzleSize; i++) {
         for(let j = 0; j < puzzleSize; j++) {
@@ -84,6 +88,7 @@ function validPuzzle(puzzle) {
 
 }
 
+// Function to solve a given puzzle
 function solvePuzzle(puzzle) {
     let index = findNextEmpty(puzzle);
 
@@ -231,6 +236,7 @@ function validBlock(puzzle) {
     return true;
 }
 
+// Function to make a copy of a given 2D puzzle array
 function copyPuzzle(puzzle) {
     let newPuzzle = new Array(puzzleSize);
 
@@ -241,6 +247,7 @@ function copyPuzzle(puzzle) {
     return newPuzzle;
 }
 
+// Function to print the given puzzle to console (DEBUG)
 function printPuzzle(puzzle) {
     console.log("*** Print Puzzle ***");
     let lineStr;

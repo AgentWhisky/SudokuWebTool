@@ -2,15 +2,19 @@
 const solveButtonID = "solve-id";
 const clearButtonID = "clear-id";
 
-
-
-
-const puzzleSize = 9;
 const cellStr = "cellInput-";
+
+
+
+// Default Puzzle Size
+const puzzleSize = 9;
+
 
 
 // i -> Rows
 // j -> Columns
+
+// Function to generate an empty 2D puzzle array
 function getEmptyPuzzle() {
     let puzzle = new Array(puzzleSize);
 
@@ -26,6 +30,7 @@ function getEmptyPuzzle() {
     return puzzle;
 }
 
+// Function to make a copy of given 2D puzzle array
 function copyPuzzle(puzzle) {
     let newPuzzle = new Array(puzzleSize);
 

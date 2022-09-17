@@ -41,7 +41,7 @@ io.on('connection', function(socket) {
         console.log(`User Disconnected with id: [${socket.id}]`);
     });
 
-    // Solve
+    // Solve Given 2D Puzzle Array
     socket.on('solve', function(puzzle) {
         tools.solve(puzzle, io, socket.id)
     });

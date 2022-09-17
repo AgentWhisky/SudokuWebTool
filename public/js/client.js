@@ -72,12 +72,16 @@ class Client extends React.Component {
         }
     }
 
+    // Function for Solve Button Event
     onSolveButton(event) {
         this.socket.emit('solve', this.state.puzzle);
     }
 
+    // Function for Clear Button Event
     onClearButton() {
+        // Set Puzzle as Empty
         this.updatePuzzle(getEmptyPuzzle());
+        // Update Solved Data
         this.setState({
             solvedIndices: [],
             solveTime: 0,
@@ -87,6 +91,7 @@ class Client extends React.Component {
 
     }
 
+    // Function to update client puzzle with a given puzzle
     updatePuzzle(newPuzzle) {
         this.setState({
             puzzle: newPuzzle
@@ -103,6 +108,7 @@ class Client extends React.Component {
 
     // *** Build Components ***
 
+    // Build Puzzle Input
     buildSudokuPuzzle() {
         let puzzle = [];
         let idCount = 0;
