@@ -16,3 +16,6 @@
 * Uses a simple backtracking algorithm that recursively tests each puzzle cell until solution or failure
 * This solution could easily be sped up with a more advanced algorithm, but currently appears to run "fast enough" (<5ms)
 
+### Web App Host Site
+* https://sudoku-web-tool.onrender.com
+* Host as a short startup time
